@@ -147,7 +147,7 @@
         max-width: 1200px;
         margin: 0 auto;
         display: flex;
-        justify-content: flex-start;
+        justify-content: center;
         flex-wrap: wrap;
       }
 
@@ -1211,56 +1211,86 @@
       }
 
       /* Dropdown Navigation Styles */
-      .dropdown {
-        position: relative;
-        display: inline-flex;
-        margin: 0;
-        padding: 0;
-        z-index: 99999;
-      }
+/* Dropdown Navigation Styles */
+        .dropdown {
+            position: relative;
+            display: inline-flex;
+            margin: 0;
+            padding: 0;
+            z-index: 99999;
+        }
 
-      .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #ffffff !important;
-        min-width: 250px;
-        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.15) !important;
-        z-index: 999999 !important;
-        border-radius: 8px;
-        overflow: hidden;
-        top: 100%;
-        left: 0;
-        border-top: 4px solid #2563aa !important;
-        padding: 5px 0 !important;
-      }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #ffffff !important;
+            min-width: 250px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.15) !important;
+            z-index: 999999 !important;
+            border-radius: 8px;
+            overflow: hidden;
+            top: 100%;
+            left: 0;
+            border-top: 4px solid #2563aa !important;
+            padding: 5px 0 !important;
+        }
 
-      .dropdown:hover .dropdown-content {
-        display: block !important;
-      }
+        /* Style for the mega-dropdown (Unified Hostels dropdown) */
+        .dropdown-content.mega-dropdown {
+            min-width: 520px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 15px !important;
+            display: none; /* Controlled by hover */
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            border-radius: 12px;
+            box-shadow: 0px 10px 30px rgba(0,0,0,0.15) !important;
+        }
 
-      .dropdown-content a {
-        color: #333333 !important;
-        background-color: #ffffff !important;
-        padding: 12px 20px !important;
-        text-decoration: none !important;
-        display: block !important;
-        font-size: 14px !important;
-        font-weight: 500 !important;
-        text-align: left !important;
-        transition: background-color 0.15s ease !important;
-        border-bottom: 1px solid #f0f0f0 !important;
-      }
+        .dropdown:hover .dropdown-content.mega-dropdown {
+            display: grid !important;
+        }
 
-      .dropdown-content a:last-child {
-        border-bottom: none !important;
-      }
+        .dropdown-column {
+            display: flex;
+            flex-direction: column;
+        }
 
-      .dropdown-content a:hover {
-        background-color: #f1f5f9 !important;
-        color: #2563aa !important;
-      }
+        .column-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: #2563aa;
+            padding: 8px 12px;
+            margin-bottom: 8px;
+            border-bottom: 2px solid #f1f5f9;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
 
-      /* Responsive Global Layout */
+        .dropdown-content.mega-dropdown a {
+            color: #475569 !important;
+            background-color: #ffffff !important;
+            padding: 8px 12px !important;
+            text-decoration: none !important;
+            display: block !important;
+            font-size: 13.5px !important;
+            font-weight: 500 !important;
+            text-align: left !important;
+            transition: all 0.2s ease !important;
+            border-radius: 6px;
+            border-bottom: none !important;
+        }
+
+        .dropdown-content.mega-dropdown a:hover {
+            background-color: #f1f5f9 !important;
+            color: #2563aa !important;
+            transform: translateX(4px);
+        }
+        /* Responsive Global Layout */
       @media (max-width: 992px) {
         .header-content,
         .mainheader-content {
@@ -1282,19 +1312,34 @@
           font-size: 14px !important;
         }
         .dropdown {
-          display: block !important;
-          width: 100% !important;
-          text-align: center !important;
+            display: block !important;
+            width: 100% !important;
+            text-align: center !important;
         }
-        .dropdown-content {
-          position: static !important;
-          width: 100% !important;
-          box-shadow: none !important;
-          border: none !important;
-          background-color: rgba(255, 255, 255, 0.95) !important;
+        .dropdown-content.mega-dropdown {
+            position: static !important;
+            width: 100% !important;
+            min-width: 100% !important;
+            box-shadow: none !important;
+            border: none !important;
+            background-color: rgba(255, 255, 255, 0.95) !important;
+            display: none !important;
+            grid-template-columns: 1fr !important;
+            gap: 15px !important;
+            padding: 10px !important;
+            transform: none !important;
         }
-        .dropdown-content a {
-          text-align: center !important;
+        .dropdown:hover .dropdown-content.mega-dropdown {
+            display: grid !important;
+        }
+        .dropdown-content.mega-dropdown a {
+            text-align: center !important;
+        }
+        .dropdown-content.mega-dropdown a:hover {
+            transform: none !important;
+        }
+        .column-title {
+            justify-content: center;
         }
 
         /* Activity Page specific fixes */
@@ -1326,57 +1371,43 @@
 
     <!-- Navigation -->
     <nav class="nav">
-      <div class="nav-content">
+<div class="nav-content">
         <a href="index.html" class="nav-item active">Home</a>
         <a href="about.html" class="nav-item">About</a>
         <a href="fee.html" class="nav-item">Fee Structure</a>
         <div class="dropdown">
-          <a href="#" class="nav-item"
-            >Boys Hostels <i style="font-size: 10px; margin-left: 3px">▼</i></a
-          >
-          <div class="dropdown-content">
-            <a href="t2.html">Type — II Hostel</a>
-            <a href="abh.html">Aryabhatt Hostel</a>
-            <a href="bah.html">Bhaskaracharya Hostel</a>
-            <a href="cvr.html">Sir C. V. Raman Hostel</a>
-            <a href="jcb.html">Sir J.C. Bose Hostel</a>
-            <a href="vmh.html">Varahmihir Hostel</a>
-            <a href="svh.html">Sir Vishveshwarya Hostel (VVS)</a>
-            <a href="hjb.html">Homi Jehangir Bhabha Hostel</a>
-            <a href="rmh.html">Ramanujan Hostel</a>
-            <a href="apj.html">Dr. APJ Abdul Kalam Hostel</a>
-          </div>
-        </div>
-        <div class="dropdown">
-          <a href="#" class="nav-item"
-            >Girls Hostels <i style="font-size: 10px; margin-left: 3px">▼</i></a
-          >
-          <div class="dropdown-content">
-            <a href="snh.html">Sister Nivediata Hostel</a>
-            <a href="kch.html">Kalpana Chawla Hostel</a>
-            <a href="vlb.html">Virangana Lakshmibai Hostel</a>
-          </div>
+            <a href="#" class="nav-item">Hostels <i style="font-size: 10px; margin-left: 3px;">▼</i></a>
+            <div class="dropdown-content mega-dropdown">
+                <div class="dropdown-column">
+                    <div class="column-title"><i class="fas fa-male"></i> Boys' Hostels</div>
+                    <a href="t2.html">Type — II Hostel</a>
+                    <a href="abh.html">Aryabhatt Hostel</a>
+                    <a href="bah.html">Bhaskaracharya Hostel</a>
+                    <a href="cvr.html">Sir C. V. Raman Hostel</a>
+                    <a href="jcb.html">Sir J.C. Bose Hostel</a>
+                    <a href="vmh.html">Varahmihir Hostel</a>
+                    <a href="svh.html">Sir Vishveshwarya Hostel (VVS)</a>
+                    <a href="hjb.html">Homi Jehangir Bhabha Hostel</a>
+                    <a href="rmh.html">Ramanujan Hostel</a>
+                    <a href="apj.html">Dr. APJ Abdul Kalam Hostel</a>
+                </div>
+                <div class="dropdown-column">
+                    <div class="column-title"><i class="fas fa-female"></i> Girls' Hostels</div>
+                    <a href="snh.html">Sister Nivediata Hostel</a>
+                    <a href="kch.html">Kalpana Chawla Hostel</a>
+                    <a href="vlb.html">Virangana Lakshmibai Hostel</a>
+                </div>
+            </div>
         </div>
         <a href="complain.html" class="nav-item">Rules & Regulations</a>
+        <a href="forms.html" class="nav-item">Important Forms</a>
         <a href="activity.html" class="nav-item">Activity</a>
         <a href="contact.html" class="nav-item">Contact Us</a>
-      </div>
-    </nav>
+        </div>
+</nav>
     <marquee class="mark">
       <a href="https://dtuhostel.in/">Click here for 2026 hostel allotment</a>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <a href="#"
-        >Provisional Hostel allotment of 2K24 M.Tech/MBA/MSC/MDes Male and
-        Female and Ph.D Female students</a
-      >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <a href="#"
-        >Provisional Hostel allotment of B.Tech 2K24 Male and Female student</a
-      >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <a href="#"
-        >Hostel application forms for first year students of BTECH, MSC,
-        MTECH,MDES and BDES, are LIVE</a
-      >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    </marquee>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</marquee>
     <!-- Hero Section -->
     <section class="hero" id="home">
       <div class="hero-content">
@@ -1467,38 +1498,8 @@
           <div class="recent-posts" id="search-section">
             <h2>Recent Posts</h2>
             <div class="post-item">
-              <a
-                href="https://saarthi.dtu.ac.in/hostel/hostel_prod_2025/hostel_registration/index_old.php"
-                >Hostel Registration Forms for the Academic Year 2025-26 🆕</a
-              >
-              <div class="post-date">May 15, 2025</div>
-            </div>
-            <div class="post-item">
-              <a href="https://forms.gle/MwMNX4FhqpkhKeus8"
-                >Application for mess fee refund for the session 2024-25 🆕</a
-              >
-              <div class="post-date">May 15, 2025</div>
-            </div>
-            <div class="post-item">
-              <a href="#"
-                >Provisional Hostel allotment of 2K24 M.Tech/MBA/MSC/MDes Male
-                and Female and Ph.D Female students</a
-              >
-              <div class="post-date">July 31, 2024</div>
-            </div>
-            <div class="post-item">
-              <a href="#"
-                >Provisional Hostel allotment of B.Tech 2K24 Male and Female
-                student</a
-              >
-              <div class="post-date">July 27, 2024</div>
-            </div>
-            <div class="post-item">
-              <a href="#"
-                >Hostel application forms for first year students of BTECH, MSC,
-                MTECH,MDES and BDES, are LIVE</a
-              >
-              <div class="post-date">July 25, 2024</div>
+              <a href="https://dtuhostel.in/">Provisional hostel allotment for year 2026 click here</a>
+              <div class="post-date">May 30, 2026</div>
             </div>
           </div>
 
@@ -1632,8 +1633,7 @@
           <h3>Prof. Raj Kumar Singh</h3>
           <p class="title">Chief Warden (Mech. Engg.)</p>
           <ul class="contact-details">
-            <li>rajkumarsingh@dce.ac.in</li>
-            <li>9310050842</li>
+            <li>chiefwarden@dtu.ac.in</li>
             <li>Ground Floor, Hostel Office</li>
           </ul>
         </div>
@@ -1647,8 +1647,7 @@
           <h3>Dr. Sanjay Patidar</h3>
           <p class="title">Hostel Officer-in-Charge (OIC) (Software Engg.)</p>
           <ul class="contact-details">
-            <li>sanjaypatidar@dtu.ac.in</li>
-            <li>9993402879</li>
+            <li>oichosteloffice@dtu.ac.in</li>
             <li>Ground Floor, Hostel Office</li>
           </ul>
         </div>
