@@ -1195,86 +1195,86 @@
       }
 
       /* Dropdown Navigation Styles */
-/* Dropdown Navigation Styles */
-        .dropdown {
-            position: relative;
-            display: inline-flex;
-            margin: 0;
-            padding: 0;
-            z-index: 99999;
-        }
+      /* Dropdown Navigation Styles */
+      .dropdown {
+        position: relative;
+        display: inline-flex;
+        margin: 0;
+        padding: 0;
+        z-index: 99999;
+      }
 
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #ffffff !important;
-            min-width: 250px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.15) !important;
-            z-index: 999999 !important;
-            border-radius: 8px;
-            overflow: hidden;
-            top: 100%;
-            left: 0;
-            border-top: 4px solid #2563aa !important;
-            padding: 5px 0 !important;
-        }
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #ffffff !important;
+        min-width: 250px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.15) !important;
+        z-index: 999999 !important;
+        border-radius: 8px;
+        overflow: hidden;
+        top: 100%;
+        left: 0;
+        border-top: 4px solid #2563aa !important;
+        padding: 5px 0 !important;
+      }
 
-        /* Style for the mega-dropdown (Unified Hostels dropdown) */
-        .dropdown-content.mega-dropdown {
-            min-width: 520px;
-            left: 50%;
-            transform: translateX(-50%);
-            padding: 15px !important;
-            display: none; /* Controlled by hover */
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            border-radius: 12px;
-            box-shadow: 0px 10px 30px rgba(0,0,0,0.15) !important;
-        }
+      /* Style for the mega-dropdown (Unified Hostels dropdown) */
+      .dropdown-content.mega-dropdown {
+        min-width: 520px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 15px !important;
+        display: none; /* Controlled by hover */
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        border-radius: 12px;
+        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15) !important;
+      }
 
-        .dropdown:hover .dropdown-content.mega-dropdown {
-            display: grid !important;
-        }
+      .dropdown:hover .dropdown-content.mega-dropdown {
+        display: grid !important;
+      }
 
-        .dropdown-column {
-            display: flex;
-            flex-direction: column;
-        }
+      .dropdown-column {
+        display: flex;
+        flex-direction: column;
+      }
 
-        .column-title {
-            font-size: 14px;
-            font-weight: 700;
-            color: #2563aa;
-            padding: 8px 12px;
-            margin-bottom: 8px;
-            border-bottom: 2px solid #f1f5f9;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
+      .column-title {
+        font-size: 14px;
+        font-weight: 700;
+        color: #2563aa;
+        padding: 8px 12px;
+        margin-bottom: 8px;
+        border-bottom: 2px solid #f1f5f9;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
 
-        .dropdown-content.mega-dropdown a {
-            color: #475569 !important;
-            background-color: #ffffff !important;
-            padding: 8px 12px !important;
-            text-decoration: none !important;
-            display: block !important;
-            font-size: 13.5px !important;
-            font-weight: 500 !important;
-            text-align: left !important;
-            transition: all 0.2s ease !important;
-            border-radius: 6px;
-            border-bottom: none !important;
-        }
+      .dropdown-content.mega-dropdown a {
+        color: #475569 !important;
+        background-color: #ffffff !important;
+        padding: 8px 12px !important;
+        text-decoration: none !important;
+        display: block !important;
+        font-size: 13.5px !important;
+        font-weight: 500 !important;
+        text-align: left !important;
+        transition: all 0.2s ease !important;
+        border-radius: 6px;
+        border-bottom: none !important;
+      }
 
-        .dropdown-content.mega-dropdown a:hover {
-            background-color: #f1f5f9 !important;
-            color: #2563aa !important;
-            transform: translateX(4px);
-        }
-        /* Responsive Global Layout */
+      .dropdown-content.mega-dropdown a:hover {
+        background-color: #f1f5f9 !important;
+        color: #2563aa !important;
+        transform: translateX(4px);
+      }
+      /* Responsive Global Layout */
       @media (max-width: 992px) {
         .header-content,
         .mainheader-content {
@@ -1296,34 +1296,34 @@
           font-size: 14px !important;
         }
         .dropdown {
-            display: block !important;
-            width: 100% !important;
-            text-align: center !important;
+          display: block !important;
+          width: 100% !important;
+          text-align: center !important;
         }
         .dropdown-content.mega-dropdown {
-            position: static !important;
-            width: 100% !important;
-            min-width: 100% !important;
-            box-shadow: none !important;
-            border: none !important;
-            background-color: rgba(255, 255, 255, 0.95) !important;
-            display: none !important;
-            grid-template-columns: 1fr !important;
-            gap: 15px !important;
-            padding: 10px !important;
-            transform: none !important;
+          position: static !important;
+          width: 100% !important;
+          min-width: 100% !important;
+          box-shadow: none !important;
+          border: none !important;
+          background-color: rgba(255, 255, 255, 0.95) !important;
+          display: none !important;
+          grid-template-columns: 1fr !important;
+          gap: 15px !important;
+          padding: 10px !important;
+          transform: none !important;
         }
         .dropdown:hover .dropdown-content.mega-dropdown {
-            display: grid !important;
+          display: grid !important;
         }
         .dropdown-content.mega-dropdown a {
-            text-align: center !important;
+          text-align: center !important;
         }
         .dropdown-content.mega-dropdown a:hover {
-            transform: none !important;
+          transform: none !important;
         }
         .column-title {
-            justify-content: center;
+          justify-content: center;
         }
 
         /* Activity Page specific fixes */
@@ -1355,43 +1355,50 @@
 
     <!-- Navigation -->
     <nav class="nav">
-<div class="nav-content">
+      <div class="nav-content">
         <a href="index.html" class="nav-item active">Home</a>
         <a href="about.html" class="nav-item">About</a>
         <a href="fee.html" class="nav-item">Fee Structure</a>
         <div class="dropdown">
-            <a href="#" class="nav-item">Hostels <i style="font-size: 10px; margin-left: 3px;">▼</i></a>
-            <div class="dropdown-content mega-dropdown">
-                <div class="dropdown-column">
-                    <div class="column-title"><i class="fas fa-male"></i> Boys' Hostels</div>
-                    <a href="t2.html">Type — II Hostel</a>
-                    <a href="abh.html">Aryabhatt Hostel</a>
-                    <a href="bah.html">Bhaskaracharya Hostel</a>
-                    <a href="cvr.html">Sir C. V. Raman Hostel</a>
-                    <a href="jcb.html">Sir J.C. Bose Hostel</a>
-                    <a href="vmh.html">Varahmihir Hostel</a>
-                    <a href="svh.html">Sir Vishveshwarya Hostel (VVS)</a>
-                    <a href="hjb.html">Homi Jehangir Bhabha Hostel</a>
-                    <a href="rmh.html">Ramanujan Hostel</a>
-                    <a href="apj.html">Dr. APJ Abdul Kalam Hostel</a>
-                </div>
-                <div class="dropdown-column">
-                    <div class="column-title"><i class="fas fa-female"></i> Girls' Hostels</div>
-                    <a href="snh.html">Sister Nivediata Hostel</a>
-                    <a href="kch.html">Kalpana Chawla Hostel</a>
-                    <a href="vlb.html">Virangana Lakshmibai Hostel</a>
-                </div>
+          <a href="#" class="nav-item"
+            >Hostels <i style="font-size: 10px; margin-left: 3px">▼</i></a
+          >
+          <div class="dropdown-content mega-dropdown">
+            <div class="dropdown-column">
+              <div class="column-title">
+                <i class="fas fa-male"></i> Boys' Hostels
+              </div>
+              <a href="t2.html">Type — II Hostel</a>
+              <a href="abh.html">Aryabhatt Hostel</a>
+              <a href="bah.html">Bhaskaracharya Hostel</a>
+              <a href="cvr.html">Sir C. V. Raman Hostel</a>
+              <a href="jcb.html">Sir J.C. Bose Hostel</a>
+              <a href="vmh.html">Varahmihir Hostel</a>
+              <a href="svh.html">Sir Vishveshwarya Hostel (VVS)</a>
+              <a href="hjb.html">Homi Jehangir Bhabha Hostel</a>
+              <a href="rmh.html">Ramanujan Hostel</a>
+              <a href="apj.html">Dr. APJ Abdul Kalam Hostel</a>
             </div>
+            <div class="dropdown-column">
+              <div class="column-title">
+                <i class="fas fa-female"></i> Girls' Hostels
+              </div>
+              <a href="snh.html">Sister Nivediata Hostel</a>
+              <a href="kch.html">Kalpana Chawla Hostel</a>
+              <a href="vlb.html">Virangana Lakshmibai Hostel</a>
+            </div>
+          </div>
         </div>
         <a href="complain.html" class="nav-item">Rules & Regulations</a>
         <a href="forms.html" class="nav-item">Important Forms</a>
         <a href="activity.html" class="nav-item">Activity</a>
         <a href="contact.html" class="nav-item">Contact Us</a>
-        </div>
-</nav>
+      </div>
+    </nav>
     <marquee class="mark">
       <a href="https://dtuhostel.in/">Click here for 2026 hostel allotment</a>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</marquee>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </marquee>
     <!-- Hero Section -->
     <section class="hero" id="home">
       <div class="hero-content">
@@ -1494,36 +1501,50 @@
               >
               <div class="post-date">May 29, 2026</div>
             </div>
-            <div class="post-item">
-              <a href="https://dtuhostel.in/">Provisional hostel allotment for year 2026 click here</a>
-              <div class="post-date">May 30, 2026</div>
-            </div>
           </div>
 
           <div class="form-posts">
             <h2>Important forms</h2>
             <div class="post-item">
-              <a href="https://drive.google.com/file/d/1xIswe-3Fq8WEpIc1pX4ITIgxfBbU0Hep/view?usp=sharing">Room Surrender Form 🆕</a>
+              <a
+                href="https://drive.google.com/file/d/1xIswe-3Fq8WEpIc1pX4ITIgxfBbU0Hep/view?usp=sharing"
+                >Room Surrender Form 🆕</a
+              >
               <div class="post-date">Available</div>
             </div>
             <div class="post-item">
-              <a href="https://drive.google.com/file/d/1DQkr_mnZ2njNz1ALuEvrc6dZkEWF9Bb3/view?usp=sharing">Mess Rebate Form 🆕</a>
+              <a
+                href="https://drive.google.com/file/d/1DQkr_mnZ2njNz1ALuEvrc6dZkEWF9Bb3/view?usp=sharing"
+                >Mess Rebate Form 🆕</a
+              >
               <div class="post-date">Available</div>
             </div>
             <div class="post-item">
-              <a href="https://drive.google.com/file/d/1gjE4esLhtpLSKUHnVJVvql2aPa1u-U7f/view?usp=sharing">Show Cause Notice 🆕</a>
+              <a
+                href="https://drive.google.com/file/d/1gjE4esLhtpLSKUHnVJVvql2aPa1u-U7f/view?usp=sharing"
+                >Show Cause Notice 🆕</a
+              >
               <div class="post-date">Available</div>
             </div>
             <div class="post-item">
-              <a href="https://drive.google.com/file/d/1WZJzsdUb5AX_b5PAk-gTs2TKDV0DZ1f2/view?usp=sharing">Casual Leave (for employees) 🆕</a>
+              <a
+                href="https://drive.google.com/file/d/1WZJzsdUb5AX_b5PAk-gTs2TKDV0DZ1f2/view?usp=sharing"
+                >Casual Leave (for employees) 🆕</a
+              >
               <div class="post-date">Available</div>
             </div>
             <div class="post-item">
-              <a href="https://drive.google.com/file/d/1a-oFpO-8chwA5J_eldy4591guVTk-mMH/view?usp=sharing">Summer Stay Form 🆕</a>
+              <a
+                href="https://drive.google.com/file/d/1a-oFpO-8chwA5J_eldy4591guVTk-mMH/view?usp=sharing"
+                >Summer Stay Form 🆕</a
+              >
               <div class="post-date">Available</div>
             </div>
             <div class="post-item">
-              <a href="https://drive.google.com/file/d/1ZZ7hAufs56vlQvto6jGjfPHLDClQNzrA/view?usp=sharing">Late Entry Permission Form 🆕</a>
+              <a
+                href="https://drive.google.com/file/d/1ZZ7hAufs56vlQvto6jGjfPHLDClQNzrA/view?usp=sharing"
+                >Late Entry Permission Form 🆕</a
+              >
               <div class="post-date">Available</div>
             </div>
           </div>
