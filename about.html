@@ -281,27 +281,51 @@
         }
         
         .warden-card {
-            border-top: 4px solid #1abc9c;
-            min-width: 180px;
-            max-width: 200px;
+            border-top: 4px solid #00bfa5;
+            min-width: 150px;
+            max-width: 210px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         
         .warden-card .designation {
-            background: linear-gradient(135deg, #1abc9c 0%, #16a085 100%);
+            background: #00bfa5;
+            color: white;
+            padding: 6px 20px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: bold;
+            display: inline-block;
+            text-transform: none;
+            letter-spacing: normal;
         }
         
         .warden-card .photo-container {
-            border-color: #1abc9c;
-            width: 60px;
-            height: 60px;
+            border-color: #00bfa5;
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            margin: 0 auto 15px auto;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
         .warden-card .name {
-            font-size: 14px;
+            font-size: 15px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 5px;
         }
         
         .warden-card .post {
-            font-size: 12px;
+            font-size: 13px;
+            color: #7f8c8d;
+            margin-bottom: 12px;
+            font-style: italic;
         }
         
         .staff-card {
@@ -318,10 +342,12 @@
         
         .wardens-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            grid-template-columns: repeat(6, 1fr);
             gap: 20px;
-            max-width: 1200px;
+            max-width: 1400px;
+            margin: 0 auto;
             justify-items: center;
+            width: 100%;
         }
         
         .connection-line {
@@ -640,14 +666,17 @@
             }
             
             .wardens-grid {
-                grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+                grid-template-columns: repeat(3, 1fr);
                 gap: 15px;
                 padding: 0 1rem;
             }
             
             .warden-card {
-                min-width: 150px;
-                max-width: 170px;
+                max-width: 180px;
+            }
+            .warden-card .photo-container {
+                width: 80px;
+                height: 80px;
             }
             
             .connection-line {
@@ -795,26 +824,30 @@
             }
             
             .wardens-grid {
-                grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-                gap: 12px;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
             }
             
             .warden-card {
-                min-width: 130px;
-                max-width: 150px;
+                max-width: 100%;
+                padding: 15px 10px;
             }
             
             .warden-card .photo-container {
-                width: 50px;
-                height: 50px;
+                width: 70px;
+                height: 70px;
             }
             
             .warden-card .name {
-                font-size: 12px;
+                font-size: 13px;
             }
             
             .warden-card .post {
                 font-size: 11px;
+            }
+            .warden-card .designation {
+                font-size: 11px;
+                padding: 5px 15px;
             }
             
             /* Chief Warden Section */
@@ -1223,90 +1256,81 @@
             <div class="wardens-grid">
                 <div class="person-card warden-card">
                     <div class="photo-container">
-                        <img src="images/priyankameel.png" alt="Dr. Priyanka Meel" class="photo" onerror="this.src='images/nil.png'">
+                        <img src="images/anamikachauchan.png" alt="Ms. Anamika Chauhan" class="photo" onerror="this.src='images/nil.png'">
                     </div>
-                    <div class="name">Dr. Priyanka Meel</div>
+                    <div class="name">Ms. Anamika Chauhan</div>
                     <div class="post">VLB Block-1</div>
                     <div class="designation">Warden</div>
                 </div>
                 
                 <div class="person-card warden-card">
                     <div class="photo-container">
-                        <img src="images/kritisuneja.png" alt="Dr. Kriti Suneja" class="photo" onerror="this.src='images/nil.png'">
+                        <img src="images/sonikadahiya.png" alt="Dr. Sonika Dahiya" class="photo" onerror="this.src='images/nil.png'">
                     </div>
-                    <div class="name">Dr. Kriti Suneja</div>
+                    <div class="name">Dr. Sonika Dahiya</div>
                     <div class="post">VLB Block-2</div>
                     <div class="designation">Warden</div>
                 </div>
                 
                 <div class="person-card warden-card">
                     <div class="photo-container">
-                        <img src="images/anamikachauchan.png" alt="Dr. Anamika Chauhan" class="photo" onerror="this.src='images/nil.png'">
+                        <img src="images/abhilashasharma.png" alt="Dr. Abhilasha Sharma" class="photo" onerror="this.src='images/nil.png'">
                     </div>
-                    <div class="name">Dr. Anamika Chauhan</div>
+                    <div class="name">Dr. Abhilasha Sharma</div>
                     <div class="post">SNH</div>
                     <div class="designation">Warden</div>
                 </div>
                 
                 <div class="person-card warden-card">
                     <div class="photo-container">
-                        <img src="images/tarunasingh.png" alt="Dr. Taruna Singh" class="photo" onerror="this.src='images/nil.png'">
+                        <img src="images/sonalsingh.png" alt="Dr. Sonal Singh" class="photo" onerror="this.src='images/nil.png'">
                     </div>
-                    <div class="name">Dr. Taruna Singh</div>
+                    <div class="name">Dr. Sonal Singh</div>
                     <div class="post">KCH</div>
                     <div class="designation">Warden</div>
                 </div>
                 
                 <div class="person-card warden-card">
                     <div class="photo-container">
-                        <img src="images/rakeshmalviya.png" alt="Dr. Rakesh Kumar Malviya" class="photo" onerror="this.src='images/nil.png'">
+                        <img src="images/sanjaykumar.png" alt="Dr. Sanjay Kumar" class="photo" onerror="this.src='images/nil.png'">
                     </div>
-                    <div class="name">Dr. Rakesh Kumar Malviya</div>
+                    <div class="name">Dr. Sanjay Kumar</div>
                     <div class="post">ABH</div>
                     <div class="designation">Warden</div>
                 </div>
                 
                 <div class="person-card warden-card">
                     <div class="photo-container">
-                        <img src="images/anshularora.png" alt="Dr. Anshul Arora" class="photo" onerror="this.src='images/nil.png'">
+                        <img src="images/krishnadutt.png" alt="Mr. Krishna Dutt" class="photo" onerror="this.src='images/nil.png'">
                     </div>
-                    <div class="name">Dr. Anshul Arora</div>
-                    <div class="post">Vikram Sarabhai (Type-II)</div>
+                    <div class="name">Mr. Krishna Dutt</div>
+                    <div class="post">Type-II Hostel</div>
                     <div class="designation">Warden</div>
                 </div>
 
                 <div class="person-card warden-card">
                     <div class="photo-container">
-                        <img src="images/veenushankar.png" alt="Dr. Veenu Shankar" class="photo" onerror="this.src='images/nil.png'">
+                        <img src="images/dcmeena.png" alt="Dr. D.C. Meena" class="photo" onerror="this.src='images/nil.png'">
                     </div>
-                    <div class="name">Dr. Veenu Shankar</div>
-                    <div class="post">Type-II & Type-III</div>
-                    <div class="designation">Warden</div>
-                </div>
-                
-                <div class="person-card warden-card">
-                    <div class="photo-container">
-                        <img src="images/rajatchatterjee.png" alt="Dr. Rajat Chatterjee" class="photo" onerror="this.src='images/nil.png'">
-                    </div>
-                    <div class="name">Dr. Rajat Chatterjee</div>
+                    <div class="name">Dr. D.C. Meena</div>
                     <div class="post">HJB Hostel</div>
                     <div class="designation">Warden</div>
                 </div>
                 
                 <div class="person-card warden-card">
                     <div class="photo-container">
-                        <img src="images/piyushtiwari.png" alt="Sh. Piyush Tiwari" class="photo" onerror="this.src='images/nil.png'">
+                        <img src="images/raghvendragautam.png" alt="Dr. Raghvendra Gautam" class="photo" onerror="this.src='images/nil.png'">
                     </div>
-                    <div class="name">Sh. Piyush Tiwari</div>
+                    <div class="name">Dr. Raghvendra Gautam</div>
                     <div class="post">CVR Hostel</div>
                     <div class="designation">Warden</div>
                 </div>
                 
                 <div class="person-card warden-card">
                     <div class="photo-container">
-                        <img src="images/sikandaralikhan.png" alt="Sh. Sikandar Ali Khan" class="photo" onerror="this.src='images/nil.png'">
+                        <img src="images/sp.png" alt="Dr. Sanjay Patidar" class="photo" onerror="this.src='images/nil.png'">
                     </div>
-                    <div class="name">Sh. Sikandar Ali Khan</div>
+                    <div class="name">Dr. Sanjay Patidar</div>
                     <div class="post">VMH Hostel</div>
                     <div class="designation">Warden</div>
                 </div>
@@ -1337,7 +1361,7 @@
                     <div class="post">JCB Hostel</div>
                     <div class="designation">Warden</div>
                 </div>
-                
+
                 <div class="person-card warden-card">
                     <div class="photo-container">
                         <img src="images/dhirenderkumar.png" alt="Dr. Dhirendra Kumar" class="photo" onerror="this.src='images/nil.png'">
@@ -1349,21 +1373,21 @@
                 
                 <div class="person-card warden-card">
                     <div class="photo-container">
-                        <img src="images/akshaymool.png" alt="Sh. Akshay Mool" class="photo" onerror="this.src='images/nil.png'">
+                        <img src="images/premprakash.png" alt="Dr. Prem Prakash" class="photo" onerror="this.src='images/nil.png'">
                     </div>
-                    <div class="name">Sh. Akshay Mool</div>
+                    <div class="name">Dr. Prem Prakash</div>
                     <div class="post">Ramanujan Hostel</div>
                     <div class="designation">Warden</div>
                 </div>
+                
                 <div class="person-card warden-card">
                     <div class="photo-container">
-                        <img src="images/shreyansh.png" alt="Sh. Shreyansh Upadhyaya" class="photo" onerror="this.src='images/nil.png'">
+                        <img src="images/shreyansh.png" alt="Mr. Shreyansh Upadhyaya" class="photo" onerror="this.src='images/nil.png'">
                     </div>
-                    <div class="name">Sh. Shreyansh Upadhyaya</div>
+                    <div class="name">Mr. Shreyansh Upadhyaya</div>
                     <div class="post">NDPG (Rented)</div>
                     <div class="designation">Warden</div>
                 </div>
-
             </div>
         </div>
         
